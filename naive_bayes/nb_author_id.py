@@ -23,9 +23,17 @@ features_train, features_test, labels_train, labels_test = preprocess()
 
 
 
+clf = GaussianNB()
+clf.fit(features_train, labels_train)
+## training time: 2.848 s
+prediction = clf.predict(features_test)
+## prediction time: 0.301 s
 
+print accuracy_score(prediction, labels_test)
 #########################################################
 ### your code goes here ###
+
+
 
 
 #########################################################
